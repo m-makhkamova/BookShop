@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import itschool.uz.databinding.FragmentLoginBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +23,8 @@ class LoginFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var myShared: MySharedPref
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +38,31 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        var binding = FragmentLoginBinding.inflate(inflater)
+        myShared = MySharedPref(requireContext())
+        binding.regText.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
+        binding.kirish.setOnClickListener {
+            val email = binding.email.text.toString()
+            val password = binding.parol.text.toString()
+        if (isValidCredentials(email, password)) {
+            redirectToMainPage()
+        } else {
+            Toast.makeText(requireContext(), "Invalid credentials", Toast.LENGTH_SHORT).show()
+        }
+        }
+        return binding.root
+    }
+    private fun isValidCredentials(email: String, password: String): Boolean {
+        val savedEmail = myShared.getUserEmail()
+        val savedPassword = myShared.getUserPassword()
+
+        return email == savedEmail && password == savedPassword
+    }
+
+    private fun redirectToMainPage() {
+        findNavController().navigate(R.id.action_loginFragment_to_menuFragment)
     }
 
     companion object {

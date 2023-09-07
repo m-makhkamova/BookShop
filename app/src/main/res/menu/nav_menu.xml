@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_menu_book_24"
+        android:title="@string/bosh_sahifa" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/qidiruv" />
+    <item
+        android:id="@+id/articles"
+        android:icon="@drawable/baseline_create_24"
+        android:title="@string/maqolalar" />
+    <item
+        android:id="@+id/bookmarks"
+        android:icon="@drawable/baseline_bookmark_border_24"
+        android:title="@string/saqlangan_kitoblar" />
+    <item
+        android:id="@+id/language"
+        android:icon="@drawable/baseline_language_24"
+        android:title="@string/tilni_o_zgartirish" />
+</menu>

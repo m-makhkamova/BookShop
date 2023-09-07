@@ -2,4 +2,9 @@
     <string name="app_name">HandyBook2</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bosh_sahifa">Bosh sahifa</string>
+    <string name="qidiruv">Qidiruv</string>
+    <string name="maqolalar">Maqolalar</string>
+    <string name="saqlangan_kitoblar">Saqlangan kitoblar</string>
+    <string name="tilni_o_zgartirish">Tilni o\'zgartirish</string>
 </resources>

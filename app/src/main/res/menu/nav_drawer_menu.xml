@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group>
+    <item
+        android:id="@+id/left_home"
+        android:icon="@drawable/baseline_menu_blue_book_24"
+        android:title="Bosh sahifa"/>
+    <item
+        android:id="@+id/left_search"
+        android:icon="@drawable/baseline_blue_search_24"
+        android:title="Qidiruv"/>
+    <item
+        android:id="@+id/left_articles"
+        android:icon="@drawable/baseline_blue_create_24"
+        android:title="Maqolalar"/>
+    <item
+        android:id="@+id/left_saved"
+        android:icon="@drawable/baseline_blue_bookmark_border_24"
+        android:title="Saqlangan kitoblar"/>
+    <item
+        android:id="@+id/left_lang"
+        android:icon="@drawable/baseline_blue_llanguage_24"
+        android:title="Tilni o'zgartirish"/>
+</group>
+<group>
+    <item
+        android:id="@+id/tg"
+        android:icon="@drawable/tg_icon"
+        android:title="Telegram kanalimiz"/>
+    <item
+        android:id="@+id/insta"
+        android:icon="@drawable/insta_icon"
+        android:title="Instagram do'konimiz"/>
+</group>
+    <group>
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/baseline_share_24"
+            android:title="Ulashish"/>
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/baseline_star_24"
+            android:title="Baho bering"/>
+    </group>
+    <item
+        android:id="logout"
+        android:icon="@drawable/baseline_logout_24"
+        android:title="Hisobdan chiqish"/>
+</menu>
