@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import itschool.uz.databinding.FragmentMenuBinding
 
@@ -24,6 +25,7 @@ class MenuFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var drawerLayout: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +44,7 @@ class MenuFragment : Fragment() {
         val activity:AppCompatActivity = getActivity() as AppCompatActivity
         activity.setSupportActionBar(binding.toolbar)
 
-        var drawerLayout = activity.findViewById<DrawerLayout>(R.id.drawerLayout)
+        drawerLayout = activity.findViewById<DrawerLayout>(R.id.drawerLayout)
         var actionBarToggle = ActionBarDrawerToggle(activity, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(actionBarToggle)
 
@@ -71,6 +73,8 @@ class MenuFragment : Fragment() {
         }
         return binding.root
     }
+
+
     private  fun loadFragment(fragment: Fragment){
         val transaction = childFragmentManager.beginTransaction()
         transaction.replace(R.id.container,fragment)
