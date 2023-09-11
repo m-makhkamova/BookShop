@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import itschool.uz.databinding.FragmentMenuBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -34,7 +37,23 @@ class MenuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var binding = FragmentMenuBinding.inflate(inflater)
+        var binding = FragmentMenuBinding.inflate(inflater, container, false)
+
+        val activity:AppCompatActivity = getActivity() as AppCompatActivity
+        activity.setSupportActionBar(binding.toolbar)
+
+        var drawerLayout = activity.findViewById<DrawerLayout>(R.id.drawerLayout)
+        var actionBarToggle = ActionBarDrawerToggle(activity, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(actionBarToggle)
+
+        activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        activity.supportActionBar?.setHomeAsUpIndicator(R.drawable.baseline_menu_24)
+        activity.supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        actionBarToggle.syncState()
+
+        loadFragment(HomeFragment())
+
         binding.bottomNav.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.home->{loadFragment(HomeFragment())

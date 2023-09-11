@@ -6,5 +6,7 @@
     <string name="qidiruv">Qidiruv</string>
     <string name="maqolalar">Maqolalar</string>
     <string name="saqlangan_kitoblar">Saqlangan kitoblar</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <string name="tilni_o_zgartirish">Tilni o\'zgartirish</string>
 </resources>
