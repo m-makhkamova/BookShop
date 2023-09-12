@@ -48,7 +48,7 @@ class MenuFragment : Fragment() {
 
         activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         activity.supportActionBar?.setHomeAsUpIndicator(R.drawable.baseline_menu_24)
-        activity.supportActionBar?.setDisplayShowTitleEnabled(false)
+        activity.getSupportActionBar()?.setDisplayShowTitleEnabled(false)
 
         actionBarToggle.syncState()
 
