@@ -41,14 +41,14 @@ class MenuFragment : Fragment() {
 
         val activity:AppCompatActivity = getActivity() as AppCompatActivity
         activity.setSupportActionBar(binding.toolbar)
-
+        binding.toolbar.setNavigationIcon(R.drawable.baseline_menu_24)
         var drawerLayout = activity.findViewById<DrawerLayout>(R.id.drawerLayout)
         var actionBarToggle = ActionBarDrawerToggle(activity, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(actionBarToggle)
 
         activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         activity.supportActionBar?.setHomeAsUpIndicator(R.drawable.baseline_menu_24)
-        activity.supportActionBar?.setDisplayShowTitleEnabled(false)
+        activity.getSupportActionBar()?.setDisplayShowTitleEnabled(false)
 
         actionBarToggle.syncState()
 
