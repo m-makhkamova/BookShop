@@ -46,11 +46,12 @@ class LoginFragment : Fragment() {
         binding.kirish.setOnClickListener {
             val email = binding.email.text.toString()
             val password = binding.parol.text.toString()
-        if (isValidCredentials(email, password)) {
             redirectToMainPage()
-        } else {
-            Toast.makeText(requireContext(), "Invalid credentials", Toast.LENGTH_SHORT).show()
-        }
+//        if (isValidCredentials(email, password)) {
+//            redirectToMainPage()
+//        } else {
+//            Toast.makeText(requireContext(), "Invalid credentials", Toast.LENGTH_SHORT).show()
+//        }
         }
         return binding.root
     }
