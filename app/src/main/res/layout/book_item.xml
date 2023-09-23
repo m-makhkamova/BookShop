@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/book_img"
         android:layout_width="70dp"
-        android:src="@drawable/book1"
+        android:src="@drawable/otkan"
         android:background="@drawable/book_rounded"
         android:clipToOutline="true"
         android:layout_height="match_parent"
