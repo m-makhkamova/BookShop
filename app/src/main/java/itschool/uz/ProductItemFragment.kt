@@ -29,8 +29,8 @@ class ProductItemFragment : Fragment() {
         if(param1=="Barchasi"){
 
         }else {
-            binding.productRv.adapter =
-                ProductRecyclerAdapter(productList.filter { it.type == param1 } as MutableList<Product>)
+//            binding.productRv.adapter =
+//                ProductRecyclerAdapter(productList.filter { it.type == param1 } as MutableList<Product>)
         }
         return binding.root
     }

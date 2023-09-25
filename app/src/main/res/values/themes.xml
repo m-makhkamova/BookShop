@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.HandyBook2" parent="Base.Theme.HandyBook2" />
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:buttonStyle">@style/Button</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:textAllCaps">false</item>
+    </style>
 </resources>
