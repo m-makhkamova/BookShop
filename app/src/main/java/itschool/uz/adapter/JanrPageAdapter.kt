@@ -1,8 +1,9 @@
-package itschool.uz
+package itschool.uz.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import itschool.uz.ProductItemFragment
 
 
 class JanrPageAdapter(fa: FragmentActivity, val list: MutableList<String>) : FragmentStateAdapter(fa) {
